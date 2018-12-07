@@ -165,10 +165,9 @@ class Application extends Component {
               only like to take folks under my wing who are driven and want to
               learn – the naturally curious type. I don’t care if you don’t know
               the difference between `let`, and `const`, or even what those are
-              to begin with. That all can be taught.
-              What can’t be taught is personal drive – the drive to achieve
-              something you know won’t be easy. Those are the people I want to
-              help.
+              to begin with. That all can be taught. What can’t be taught is
+              personal drive – the drive to achieve something you know won’t be
+              easy. Those are the people I want to help.
             </p>
             <p>
               If this sounds like you, awesome! Please take a few minutes to
@@ -179,10 +178,12 @@ class Application extends Component {
             <form
               name="application"
               method="POST"
-              action="/submitted"
-              netlify
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
               style={{ width: '100%' }}
             >
+              <input type="hidden" name="form-name" value="application" />
+
               <Section mb="30px">
                 <h3>Basic Info</h3>
                 <Service>
