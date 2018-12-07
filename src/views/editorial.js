@@ -88,7 +88,7 @@ const EditorialSummary = styled(Link)`
   }
 
   @media (max-width: 700px) {
-      margin-bottom: 30px;
+    margin-bottom: 30px;
     width: 100%;
   }
 `;
@@ -103,55 +103,52 @@ class Editorial extends Component {
             Editorial
           </PageHeader>
           <PageDescription>
-            Ramblings, thoughts, interviews, and whatever else happens to be on my mind.
+            Ramblings, thoughts, interviews, and whatever else happens to be on
+            my mind.
           </PageDescription>
           <EditorialWrap>
             <EditorialSummary to="/">
               <div>01 Jan 2019</div>
-              <div>Lorem Ipsum Dolar Set Amit Consectetur</div>
+              <div>Matt Clough on Problem Solving</div>
               <div>
-                Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum Bäcker
+                Q&A With Matt Clough on trouble shooting bugs, staying focused
+                at work, and breaking down ellaborate design.
               </div>
             </EditorialSummary>
 
             <EditorialSummary to="/">
               <div>01 Jan 2019</div>
-              <div>Lorem Ipsum Dolar Set Amit Consectetur</div>
+              <div>Robots Took My Job! Or, More Time for the World</div>
               <div>
-                Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum Bäcker
+                A Conversation with Danny Sellergren on AI and what it means for
+                the future.
               </div>
             </EditorialSummary>
 
             <EditorialSummary to="/">
               <div>01 Jan 2019</div>
-              <div>Lorem Ipsum Dolar Set Amit Consectetur</div>
+              <div>On Rapid Prototyping and Product Management</div>
+              <div>With Bradley Robb</div>
+            </EditorialSummary>
+
+            <EditorialSummary to="/">
+              <div>01 Jan 2019</div>
+              <div>Media is Broken. Or, the Facebook & Google Wars.</div>
               <div>
-                Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum Bäcker
+                A case study on building a paywall for online publishers
               </div>
             </EditorialSummary>
 
             <EditorialSummary to="/">
               <div>01 Jan 2019</div>
-              <div>Lorem Ipsum Dolar Set Amit Consectetur</div>
-              <div>
-                Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum Bäcker
-              </div>
+              <div>Naked, Afraid, and Alone. Or, Learning to Code</div>
+              <div>5 Tips to Level Up As a Frontend Developer.</div>
             </EditorialSummary>
 
             <EditorialSummary to="/">
               <div>01 Jan 2019</div>
-              <div>Lorem Ipsum Dolar Set Amit Consectetur</div>
-              <div>
-                Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum Bäcker
-              </div>
-            </EditorialSummary>
-
-            <EditorialSummary to="/">
-              <div>01 Jan 2019</div>
-              <div>Lorem Ipsum Dolar Set Amit Consectetur</div>
-              <div>
-                Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum Bäcker
-              </div>
+              <div>Are you taking your eye health seriously?</div>
+              <div>Do it, do it right, and do it right now</div>
             </EditorialSummary>
           </EditorialWrap>
         </PageWrap>

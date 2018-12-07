@@ -136,7 +136,7 @@ const Quote = styled.div`
   }
 `;
 
-const ScheduleButton = styled.a`
+const ScheduleButton = styled(Link)`
   margin-top: 30px;
   width: 220px;
   height: 42px;
@@ -275,7 +275,7 @@ class Mentorship extends Component {
                 </div>
               </p>
 
-              <ScheduleButton href="/application">
+              <ScheduleButton to="/application">
                 Apply for Mentorship
               </ScheduleButton>
             </Section>
