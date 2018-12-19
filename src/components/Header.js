@@ -49,10 +49,11 @@ export default class Header extends Component {
           <MyLogo src={Logo} />
         </UI.Wordmark>
         <NavInfo>
-          <Link to="/about">Studio</Link>
-          <Link to="/about">Workshops</Link>
+          <Link to="/about">About</Link>
+          <Link to="/studio">Studio</Link>
+          <Link to="/workshops">Workshops</Link>
           <Link to="/mentorship">1-1 Mentorship</Link>
-          <Link to="/about">Journal</Link>
+          <Link to="/editorial">Journal</Link>
         </NavInfo>
       </StyledHeader>
     );

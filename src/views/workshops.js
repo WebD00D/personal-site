@@ -27,6 +27,7 @@ const PageHeader = styled(Link)`
   font-size: 22px;
   color: #111;
   text-decoration: none;
+  font-family: 'Work Sans';
 
   img {
     margin-right: 8px;
@@ -147,6 +148,7 @@ class Store extends Component {
   }
 
   render() {
+    
     return (
       <div className="container">
         <ProductMenu
@@ -157,26 +159,7 @@ class Store extends Component {
         <PageWrap faded={this.state.productMenu}>
           <PageHeader to="/">
             <img src={Arrow} />
-            Store
-          </PageHeader>
-          <PageDescription>
-            Up your skills with a workshop, get a head start with a theme, or
-            show off your love for pixels with a t-shirt or tote.
-          </PageDescription>
-        </PageWrap>
-      </div>
-    );
-    return (
-      <div className="container">
-        <ProductMenu
-          closeMenu={() => this.toggleMenu()}
-          visible={this.state.productMenu}
-        />
-
-        <PageWrap faded={this.state.productMenu}>
-          <PageHeader to="/">
-            <img src={Arrow} />
-            Store
+            Workshops
           </PageHeader>
           <PageDescription>
             Up your skills with a workshop, get a head start with a theme, or
@@ -420,185 +403,7 @@ class Store extends Component {
             </Row>
           </Rows>
 
-          <SectionTitle>
-            <div>Websites</div>
-            <SectionSearch type="text" placeholder="Filter by name" />
-          </SectionTitle>
-
-          <Rows>
-            <Header pad="6px">
-              <Column flex="1">Name</Column>
-              <Column flex="2">Use Cases</Column>
-              <Column flex="1">Released</Column>
-              <Column flex="1">Price</Column>
-            </Header>
-
-            <Row onClick={() => this.toggleMenu()}>
-              <Column flex="1">
-                <b>01 LA MUSEÉ</b>
-              </Column>
-              <Column flex="2">Portfolio, Catalogue</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">18</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row onClick={() => this.toggleMenu()}>
-              {' '}
-              <Column flex="1">
-                <b>01 LA MUSEÉ</b>
-              </Column>
-              <Column flex="2">Portfolio, Catalogue</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">18</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row onClick={() => this.toggleMenu()}>
-              {' '}
-              <Column flex="1">
-                <b>01 LA MUSEÉ</b>
-              </Column>
-              <Column flex="2">Portfolio, Catalogue</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">18</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row onClick={() => this.toggleMenu()}>
-              {' '}
-              <Column flex="1">
-                <b>01 LA MUSEÉ</b>
-              </Column>
-              <Column flex="2">Portfolio, Catalogue</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">48</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row onClick={() => this.toggleMenu()}>
-              <Column flex="1">
-                <b>01 LA MUSEÉ</b>
-              </Column>
-              <Column flex="2">Portfolio, Catalogue</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">48</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row onClick={() => this.toggleMenu()}>
-              <Column flex="1">
-                <b>01 LA MUSEÉ</b>
-              </Column>
-              <Column flex="2">Portfolio, Catalogue</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">48</Column>
-              <img src={Arrow} />
-            </Row>
-          </Rows>
-
-          <SectionTitle>
-            <div>Web App Kickstarters</div>
-            <SectionSearch type="text" placeholder="Filter by name" />
-          </SectionTitle>
-
-          <Rows>
-            <Header pad="6px">
-              <Column flex="1">Name</Column>
-              <Column flex="2">Use Cases</Column>
-              <Column flex="1">Released</Column>
-              <Column flex="1">Price</Column>
-            </Header>
-
-            <Row onClick={() => this.toggleMenu()}>
-              {' '}
-              <Column flex="1">
-                <b>01 LA MUSEÉ</b>
-              </Column>
-              <Column flex="2">Portfolio, Catalogue</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">99</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row onClick={() => this.toggleMenu()}>
-              <Column flex="1">
-                <b>01 LA MUSEÉ</b>
-              </Column>
-              <Column flex="2">Portfolio, Catalogue</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">99</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row onClick={() => this.toggleMenu()}>
-              <Column flex="1">
-                <b>01 LA MUSEÉ</b>
-              </Column>
-              <Column flex="2">Portfolio, Catalogue</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">148</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row onClick={() => this.toggleMenu()}>
-              <Column flex="1">
-                <b>01 LA MUSEÉ</b>
-              </Column>
-              <Column flex="2">Portfolio, Catalogue</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">148</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row onClick={() => this.toggleMenu()}>
-              <Column flex="1">
-                <b>01 LA MUSEÉ</b>
-              </Column>
-              <Column flex="2">Portfolio, Catalogue</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">148</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row onClick={() => this.toggleMenu()}>
-              <Column flex="1">
-                <b>01 LA MUSEÉ</b>
-              </Column>
-              <Column flex="2">Portfolio, Catalogue</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">148</Column>
-              <img src={Arrow} />
-            </Row>
-          </Rows>
-
-          <SectionTitle>
-            <div>Just for Fun</div>
-            <SectionSearch type="text" placeholder="Filter by name" />
-          </SectionTitle>
-
-          <Rows>
-            <Header pad="6px">
-              <Column flex="1">Name</Column>
-              <Column flex="1">Price</Column>
-            </Header>
-
-            <Row onClick={() => this.toggleMenu()}>
-              <Column flex="1">
-                <b>ONES + ZEROS T-SHIRT</b>
-              </Column>
-              <Column flex="1">16.99</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row onClick={() => this.toggleMenu()}>
-              <Column flex="1">
-                <b>ONES + ZEROS TOTE </b>
-              </Column>
-              <Column flex="1">12.99</Column>
-              <img src={Arrow} />
-            </Row>
-          </Rows>
+       
         </PageWrap>
       </div>
     );

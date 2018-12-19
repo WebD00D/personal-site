@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 // VIEWS
 import Homepage from './views/homepage';
 import Studio from './views/studio';
-import Store from './views/store';
+import Workshops from './views/workshops';
 import Mentorship from './views/mentorship';
 import Application from './views/application';
 import Editorial from './views/editorial';
@@ -27,7 +27,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Homepage} />
               <Route path="/studio" component={Studio} />
-              <Route path="/store" component={Store} />
+              <Route path="/workshops" component={Workshops} />
               <Route path="/mentorship" component={Mentorship} />
               <Route path="/application" component={Application} />
               <Route path="/submitted" component={Submitted} />
