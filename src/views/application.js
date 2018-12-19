@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
 
+
 import Arrow from '../images/rightArrow.svg';
 
 const PageWrap = styled.div`
@@ -174,11 +175,14 @@ class Application extends Component {
               fill out this quick application. Show me your serious :)
             </p>
           </PageDescription>
+
+       
           <PageSections>
             <form
               name="application"
               method="POST"
               data-netlify="true"
+              netlify="true"
               data-netlify-honeypot="bot-field"
               style={{ width: '100%' }}
             >
@@ -188,27 +192,27 @@ class Application extends Component {
                 <h3>Basic Info</h3>
                 <Service>
                   <b>What's your full name?</b>
-                  <input name="full-name" type="text" required />
+                  <input name="full-name" type="text" />
                 </Service>
 
                 <Service>
                   <b>Email address</b>
-                  <input name="email" type="email" required />
+                  <input name="email" type="email" />
                 </Service>
 
                 <Service>
                   <b>Age</b>
-                  <input name="age" type="number" required />
+                  <input name="age" type="number" />
                 </Service>
 
                 <Service>
                   <b>Location</b>
-                  <input name="location" type="text" required />
+                  <input name="location" type="text" />
                 </Service>
 
                 <Service>
                   <b>Occupation</b>
-                  <input name="occupation" type="text" required />
+                  <input name="occupation" type="text" />
                 </Service>
               </Section>
 
@@ -228,7 +232,7 @@ class Application extends Component {
                       looking for a well paying job? Let me know in detail.
                     </div>
                   </b>
-                  <textarea name="why-learn-to-code" required />
+                  <textarea name="why-learn-to-code" />
                 </Service>
 
                 <Service>
@@ -236,7 +240,7 @@ class Application extends Component {
                     A friend approaches you and says, “Hey, the garden hose
                     isn't working!”. How would you respond to this?
                   </b>
-                  <textarea name="garden-hose-question" required />
+                  <textarea name="garden-hose-question" />
                 </Service>
 
                 <Service>
@@ -244,7 +248,7 @@ class Application extends Component {
                     Do you get frustrated easily when you don’t understand
                     something?
                   </b>
-                  <input name="frustrared" type="text" required />
+                  <input name="frustrared" type="text" />
                 </Service>
 
                 <Service>
@@ -252,7 +256,7 @@ class Application extends Component {
                     What’s your experience with HTML, CSS, and JavaScript, if
                     any?
                   </b>
-                  <input name="past-coding-experience" type="text" required />
+                  <input name="past-coding-experience" type="text" />
                 </Service>
 
                 <Service>
@@ -269,7 +273,7 @@ class Application extends Component {
                       ex. Staying focused or motivated, allocating the time, etc
                     </div>
                   </b>
-                  <textarea name="biggest-challenge" required />
+                  <textarea name="biggest-challenge" />
                 </Service>
 
                 <Service>
@@ -285,17 +289,17 @@ class Application extends Component {
                       Unless of course that is your hobby as well
                     </div>
                   </b>
-                  <textarea name="hobbies" required />
+                  <textarea name="hobbies" />
                 </Service>
 
                 <Service>
                   <b>PC or Mac user?</b>
-                  <input name="pc-mac-user" type="text" required />
+                  <input name="pc-mac-user" type="text" />
                 </Service>
 
                 <Service>
                   <b>Do you have access to a high speed internet connection?</b>
-                  <input name="internet-connection" type="text" required />
+                  <input name="internet-connection" type="text" />
                 </Service>
 
                 <Service>
@@ -303,7 +307,7 @@ class Application extends Component {
                     What’s your current work / school schedule like? How much
                     time per week can you dedicate to learning with me?
                   </b>
-                  <input name="schedule" type="text" required />
+                  <input name="schedule" type="text" />
                 </Service>
 
                 <Service>
@@ -311,7 +315,7 @@ class Application extends Component {
                     Pretend you wake up tomorrow morning and have Steve Wozniak
                     programming skills. What would you build first?
                   </b>
-                  <textarea name="the-woz-question" required />
+                  <textarea name="the-woz-question" />
                 </Service>
 
                 <ScheduleButton type="submit">

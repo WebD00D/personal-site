@@ -136,7 +136,7 @@ const Quote = styled.div`
   }
 `;
 
-const ScheduleButton = styled(Link)`
+const ScheduleButton = styled('a')`
   margin-top: 30px;
   width: 220px;
   height: 42px;
@@ -164,7 +164,19 @@ class Mentorship extends Component {
               <img src={Arrow} />
               Mentorship
             </Link>
-
+          </PageHeader>
+          <PageDescription>
+            <p>
+              For the last seven years I’ve been building websites and web apps
+              for companies, friends, family, and myself. It’s been an uphill
+              journey since day one, but I’ve been loving every minute of it –
+              especially helping others learn how. Pretty much since the
+              beginning of my career, I’ve always been eager to help answer
+              questions, from basic “How do I make X do Y” to architecting data
+              models for web apps. To be cliché, coding has changed my life, and
+              I want to help others use it to change theirs and have more of
+              those “aha” moments.
+            </p>
             <div className="quick-help">
               Looking for some quick coding help?{' '}
               <a
@@ -172,110 +184,113 @@ class Mentorship extends Component {
                 target="_blank"
                 href="https://calendly.com/code-with-christian/frontend-help"
               >
-                Book a 30 min session for $15.
+                Book a 40 min session for $25.
               </a>
             </div>
-          </PageHeader>
-          <PageDescription>
-            <p>
-              Intersted in learning how to code, and not really sure where you
-              want it to take you? Maybe get hired at an award winning agency,
-              disrupt an industry at a startup, or start a freelance career –
-              all of which can be very lucrative and quite rewarding. So how do
-              you get your foot in the door and possibly fill one of these
-              roles? Well, you go through the steps of completing an application
-              and answer a few questions, send over your resume, cover letter,
-              references, and lastly a link to your …portfolio.
-            </p>
-            <p>
-              See a problem here? If you’ve read this far, I’m going to assume
-              you don’t have much experience coding and probably an empty
-              portfolio to show for it – but that’s okay, we’re going to build
-              one for you together! Introducting, my Portfolio Kickstart series!
-              Where we'll get you off the ground running with a portfolio that
-              you could proudly take and show off to a future employer, and
-              explain in detail how you built each project.
-            </p>
           </PageDescription>
           <PageSections>
             <Section mb="30px">
-              <h3>Course Outcomes</h3>
+              <h3>Curriculum Outline</h3>
               <Service>
-                <b>Build 3 Websites</b>
-                <p>Beautifully designed, and agency worthy.</p>
-              </Service>
-
-              <Service>
-                <b>Build a Portfolio Site</b>
-                <p>You'll need a place to showcase the goods!</p>
-              </Service>
-
-              <Service>
-                <b>Git Deep Dive</b>
+                <b>HTML & CSS Fundamentals</b>
                 <p>
-                  Learn how to use Github to save and collaborate on projects
+                  Learn all about the skeleton of the web and how to give it
+                  some skin!
                 </p>
               </Service>
 
               <Service>
-                <b>Learn How to Think like Developer</b>
+                <b>Chrome Dev Tools</b>
                 <p>
-                  Learn how to approach and solve problems, break down designs,
-                  and work with a team.
+                  The number one used tool in web developmnt besides your
+                  keyboard
                 </p>
               </Service>
 
               <Service>
-                <b>Personalized Action Plan</b>
+                <b>Layouts</b>
                 <p>
-                  Being a developer means non-stop learning. At the end of the
-                  course we'll put together a game plan tailored to your goals
-                  of becoming the best developer you can be.
+                  How to reason about and appraching creating beautiful web
+                  pages.
+                </p>
+              </Service>
+
+              <Service>
+                <b>Intro to Git and Github</b>
+                <p>
+                  We'll cover the Why's behind the reason we use Git, setting up
+                  a project on Github, creating and checking out branches,
+                  resolving merge conflicts and more!
+                </p>
+              </Service>
+
+              <Service>
+                <b>Deploying Sites with Netlify</b>
+                <p>
+                  How to reason about and appraching creating beautiful web
+                  pages.
+                </p>
+              </Service>
+
+              <Service>
+                <b>Modern JavaScript</b>
+                <p>
+                  The J in JAM Stack – Not to get confused with <i>Java</i>
+                </p>
+              </Service>
+
+              <Service>
+                <b>React</b>
+                <p>
+                  Learn how to build sites and apps with the insanely popular JS
+                  library for building user interfaces and highly reusable code.
+                </p>
+              </Service>
+
+              <Service>
+                <b>Working with Data and APIs</b>
+                <p>
+                  We'll cover how to create, retrieve, update and delete data
+                  within your website and app.
+                </p>
+              </Service>
+
+              <Service>
+                <b>Personal Goal Setting</b>
+                <p>
+                  Whether your goal is to become a freelancer, create a startup,
+                  or join an agency – we'll dive deeper into creating a
+                  personalized action plan.
                 </p>
               </Service>
             </Section>
             <Section>
               <h3>What to expect</h3>
               <p>
-                For 8 weeks, we'll work together (meeting over video 2x per
-                week, and daily Slack standups) to build 3 beautiful websites,
-                and a portfolio site to showcase them.{' '}
+                For 3 months, we'll work together meeting 5 times per week (2x
+                over video, 3x over Slack) covering the foundations of modern
+                frontend web development.
               </p>
               <p>
-                You’ll be working with modern day web technologies using the JAM
-                stack (JavaScript, Api’s, and Markup) and coding up designs that
-                are agency worthy. Now, just making a few websites and putting
-                them up on the inter-webs is not the overarching goal here.
-                Throughout our journey, I’m going to teach you how to think like
-                a frontend developer. We’ll cover how to approach problems and
-                troubleshoot, ask the right questions, break down designs, and
-                I’ll go over what it’s like and what you can expect working on a
-                team with other developers, designers, and managers.
+                You’ll learn how to code using the the JAM stack (Javascript,
+                API’s and Markup), and build agency-worthy designs. Aside from
+                just learning the syntax and throwing something up on the
+                inter-webs, I’m also going to teach you how to think like a
+                frontend developer. We’ll cover how to approach common issues
+                and troubleshooting techniques, how to properly ask questions in
+                development communities, breaking down designs, and I’ll go over
+                what it’s like to work with a team of other developers and
+                designers.
               </p>
 
               <h3>Price</h3>
               <p>
-                Total price is $499. First deposit (50%) due beginning of class.
-                Second deposit due after the 4th week. Within the first week, if
-                you decide this isn’t for you, no worries, full refund.
-              </p>
-              <p>
-                Just to note, the national average starting salary for a{' '}
-                <i>Junior</i> Frontend Developer is <b>$59,776*</b>
-                <div>
-                  <small>
-                    <a
-                      target="_blank"
-                      style={{ color: '#111' }}
-                      href="https://www.indeed.com/salaries/Junior-Front-End-Developer-Salaries"
-                    >
-                      *As of December 2018
-                    </a>
-                  </small>
-                </div>
+                Total price is $900. First deposit ($450) due beginning of
+                class. Second deposit due after the 6th week. Within the first
+                week, if you decide this isn’t for you, no worries, full refund.
               </p>
 
-              <ScheduleButton to="/application">
+              <ScheduleButton target="_blank" href="https://www.typeform.com">
                 Apply for Mentorship
               </ScheduleButton>
             </Section>

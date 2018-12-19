@@ -163,6 +163,25 @@ class Store extends Component {
             Up your skills with a workshop, get a head start with a theme, or
             show off your love for pixels with a t-shirt or tote.
           </PageDescription>
+        </PageWrap>
+      </div>
+    );
+    return (
+      <div className="container">
+        <ProductMenu
+          closeMenu={() => this.toggleMenu()}
+          visible={this.state.productMenu}
+        />
+
+        <PageWrap faded={this.state.productMenu}>
+          <PageHeader to="/">
+            <img src={Arrow} />
+            Store
+          </PageHeader>
+          <PageDescription>
+            Up your skills with a workshop, get a head start with a theme, or
+            show off your love for pixels with a t-shirt or tote.
+          </PageDescription>
 
           <SectionTitle>
             <div>Workshops</div>
