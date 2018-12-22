@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 
 import Arrow from '../images/rightArrow.svg';
 
+
 const PageWrap = styled.div`
   max-width: 1000px;
   padding-bottom: 150px;
+  padding-top: 50px;
   margin-right: auto;
   margin-left: auto;
 
@@ -23,6 +25,8 @@ const PageHeader = styled(Link)`
   font-size: 22px;
   color: #111;
   text-decoration: none;
+  font-family: 'Work Sans';
+
 
   img {
     margin-right: 8px;

@@ -16,8 +16,8 @@ import KNOWN from '../images/known.png';
 import Maya from '../images/mayalogo@2x.png';
 
 const Section = styled('div')`
-  padding-top: 60px;
-  padding-bottom: ${props => props.pb || '60px'};
+  padding-top: 100px;
+  padding-bottom: ${props => props.pb || '100px'};
 
   background-color: ${props => props.bg};
 `;
@@ -42,6 +42,16 @@ const MyFace = styled('img')`
   width: auto;
 `;
 
+const ServiceImage = styled('img')`
+  height: 170px;
+`;
+
+const JournalImage = styled('img')`
+  height: 300px;
+`;
+
+
+
 class HomepageView extends Component {
   render() {
     return (
@@ -50,12 +60,15 @@ class HomepageView extends Component {
           <div className="content-wrap">
             <UI.Flex>
               <UI.Box flex="2">
-                <UI.H1>Hello, beinvenue, välkommen, aloha.</UI.H1>
+                <UI.H1>
+                  Hello, välkommen,{' '}
+                  <span style={{ whiteSpace: 'nowrap' }}>안녕,</span> aloha.
+                </UI.H1>
                 <UI.H2 mb="50px">
-                  My name is Christian. I can build you a website, teach you how
-                  to code, or consult and knock around some ideas for your next
-                  digital project. This past year I've mostly been slinging code
-                  for{' '}
+                  My name is Christian – welcome to my corner of the world wide
+                  web. I can build you a website, teach you how to code, or
+                  consult and knock around some ideas for your next digital
+                  project. This past year I've mostly been slinging code for{' '}
                   <UI.ExternalLink href="https://www.rareart.io">
                     Rare Art Labs
                   </UI.ExternalLink>
@@ -63,7 +76,8 @@ class HomepageView extends Component {
                   <UI.ExternalLink href="https://www.stabmag.com">
                     Stab Magazine.
                   </UI.ExternalLink>{' '}
-                  I'm available for small freelance projects.
+                  When I'm not behind the screen, I like to surf, travel, and
+                  cook delicious food for my beautiful wife.
                 </UI.H2>
                 <UI.ButtonLink href="">Connect with me</UI.ButtonLink>
               </UI.Box>
@@ -102,7 +116,7 @@ class HomepageView extends Component {
 
         <Section bg="#0f0f10">
           <div className="content-wrap">
-            <UI.H3 color="#FFF">A brief introduction</UI.H3>
+            <UI.H3 theme="light">A brief introduction</UI.H3>
             <UI.P color="#d6d6d6">
               Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum Bäcker,
               später dann zum Einkaufen, ich sauge die Wohnung, ich arbeite
@@ -115,14 +129,77 @@ class HomepageView extends Component {
           </div>
         </Section>
         <Section>
-          <div className="container">Services</div>
+          <div className="content-wrap">
+            <UI.H3 theme="dark">How I can help you</UI.H3>
+            <UI.Flex alignCenter>
+              <UI.Box>
+                <UI.P mb="30px" color="#0f0f10">
+                  Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum
+                  Bäcker, später dann zum Einkaufen, ich sauge die Wohnung, ich
+                  arbeite zusammen mit meiner Tochter eine Zeitlang im Garten
+                  und am Nachmittag sind.
+                </UI.P>
+                <UI.P mb="80px" color="#0f0f10">
+                  Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum
+                  Bäcker, später dann zum Einkaufen, ich sauge die Wohnung, ich
+                  arbeite zusammen mit meiner Tochter eine Zeitlang im Garten
+                  und am Nachmittag sind.
+                </UI.P>
+                <UI.Button to="/studio">Learn more</UI.Button>
+              </UI.Box>
+              <UI.Box mt="-60px">
+                <UI.Flex column>
+                  <UI.Flex>
+                    <UI.Box mb="20px" flexCenter column>
+                      <ServiceImage src={me} />
+                      <UI.H4>Design + Development</UI.H4>
+                    </UI.Box>
+                    <UI.Box mb="20px" flexCenter column>
+                      <ServiceImage src={me} />
+                      <UI.H4>Coaching + Mentorship</UI.H4>
+                    </UI.Box>
+                  </UI.Flex>
+                  <UI.Flex>
+                    <UI.Box mb="20px" flexCenter column>
+                      <ServiceImage src={me} />
+                      <UI.H4>Strategy + Consulting</UI.H4>
+                    </UI.Box>
+                    <UI.Box mb="20px" flexCenter column>
+                      <ServiceImage src={me} />
+                      <UI.H4>Workshops + Training</UI.H4>
+                    </UI.Box>
+                  </UI.Flex>
+                </UI.Flex>
+              </UI.Box>
+            </UI.Flex>
+          </div>
         </Section>
         <Section bg="#f9f9f9">
-          <div className="container">Journal</div>
+          <div className="content-wrap">
+            <UI.H3 theme="dark">Editorial – Latest</UI.H3>
+            <UI.Flex alignCenter>
+              <UI.Box flex="2">
+                <UI.H4 title mb="12px">
+                  Lorem ipsum dolar set
+                </UI.H4>
+                <UI.P mb="30px">
+                  Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum
+                  Bäcker, später dann zum Einkaufen, ich sauge die Wohnung, ich
+                  arbeite zusammen mit meiner Tochter eine Zeitlang im Garten
+                  und am Nachmittag sind wir zu einem Kindergeburtstag bei
+                  Freunden eingeladen; das Wetter an diesem 1. September ist
+                  milde, die Sonne scheint, nur im Schatten kann man den
+                  aufziehenden Herbst bereits erahnen...
+                </UI.P>
+                <UI.ButtonLink href="#">View all</UI.ButtonLink>
+              </UI.Box>
+              <UI.Box flexCenter flex="1">
+                <JournalImage src={me} />
+              </UI.Box>
+            </UI.Flex>
+          </div>
         </Section>
-        <Section>
-          <div className="container">Featured Workshops</div>
-        </Section>
+
       </div>
     );
   }

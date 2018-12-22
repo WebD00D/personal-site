@@ -8,6 +8,7 @@ import Arrow from '../images/rightArrow.svg';
 const PageWrap = styled.div`
   max-width: 1000px;
   padding-bottom: 150px;
+  padding-top: 50px;
   margin-right: auto;
   margin-left: auto;
 
@@ -24,6 +25,7 @@ const PageHeader = styled.div`
   color: #111;
   text-decoration: none;
   justify-content: space-between;
+  font-family: 'Work Sans';
 
   .quick-help {
     font-size: 12px;

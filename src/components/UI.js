@@ -3,20 +3,29 @@ import { Link } from 'react-router-dom';
 
 export const Flex = styled('div')`
   display: flex;
+  ${props => (props.column ? 'flex-direction: column' : '')}
+
+  ${props => (props.alignCenter ? 'align-items: center' : '')}
 `;
 
 export const Box = styled('div')`
   flex: ${props => props.flex || 1};
+  ${props => (props.column ? 'flex-direction: column' : '')}
+  margin-bottom: ${props => props.mb};
+  margin-top: ${props => props.mt};
 
   ${props =>
     props.flexCenter
       ? 'display: flex; justify-content: center; align-items:center'
       : ''};
+
+ 
 `;
 
 export const H1 = styled('h1')`
   margin-top: 0px;
-  font-size: 60px;
+  margin-bottom: 20px;
+  font-size: 70px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 600;
 `;
@@ -37,18 +46,33 @@ export const H3 = styled('div')`
   font-family: 'Work Sans', sans-serif;
 
   font-size: 24px;
-  color: ${props => props.color};
+
+  ${props => (props.theme === 'dark' ? 'color: #0f0f10' : 'color: #fff')}
 
   &:after {
     position: absolute;
     height: 16px;
     width: -webkit-fill-available;
     left: 0px;
-    background-color: #f5f5f5;
+
+    ${props =>
+      props.theme === 'dark'
+        ? 'background-color: #0f0f10'
+        : 'background-color: #ccc'}
+
     opacity: 0.2;
     content: '';
     bottom: -5px;
   }
+`;
+
+export const H4 = styled('h4')`
+  margin-bottom: ${props => props.mb};
+  font-size: ${props => (props.title ? '18px' : '14px')};
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.75;
 `;
 
 export const P = styled('p')`
@@ -59,6 +83,8 @@ export const P = styled('p')`
   letter-spacing: 0.5px;
   line-height: 1.75;
   color: ${props => props.color};
+  margin-bottom: ${props => props.mb};
+  text-align: justify;
 `;
 
 const ButtonBase = `
@@ -126,4 +152,18 @@ export const Wordmark = styled(Link)`
   text-decoration: none;
   letter-spacing: 0.5px;
   color: #111;
+`;
+
+export const Video = styled('iframe')`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+`;
+
+export const VideoContainer = styled('div')`
+  padding: 56.25% 0 0 0;
+  position: relative;
 `;

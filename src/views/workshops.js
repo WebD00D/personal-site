@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 const PageWrap = styled.div`
   max-width: 1000px;
   padding-bottom: 150px;
+  padding-top: 50px;
   margin-right: auto;
   margin-left: auto;
   transition: 0.2s ease;
@@ -62,12 +63,13 @@ const Header = styled.div`
   border-bottom: 1px solid #111;
 `;
 
-const Row = styled.div`
+const Row = styled(Link)`
   position: relative;
   display: flex;
   padding-top: ${props => props.pad || '16px'};
   padding-bottom: ${props => props.pad || '16px'};
-
+  color: #000;
+  text-decoration: none;
   border-bottom: 1px solid #111;
   cursor: pointer;
   transition: 0.2s ease;
@@ -148,7 +150,6 @@ class Store extends Component {
   }
 
   render() {
-    
     return (
       <div className="container">
         <ProductMenu
@@ -162,27 +163,23 @@ class Store extends Component {
             Workshops
           </PageHeader>
           <PageDescription>
-            Up your skills with a workshop, get a head start with a theme, or
-            show off your love for pixels with a t-shirt or tote.
+            Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
           </PageDescription>
-
-          <SectionTitle>
-            <div>Workshops</div>
-            <SectionSearch type="text" placeholder="Filter by name" />
-          </SectionTitle>
 
           <Rows>
             <Header pad="6px">
               <Column flex="2">Name</Column>
-              <Column flex="2">Type</Column>
               <Column flex="1">Released</Column>
               <Column flex="1">Length</Column>
               <Column flex="1">Price</Column>
             </Header>
 
-            <Row>
+            <Row to="/w/kickstarter-001">
               <Column flex="2">Craigslist Clone</Column>
-              <Column flex="2">React // Firebase</Column>
               <Column flex="1">02 Jan 2019</Column>
               <Column flex="1">6 hrs</Column>
 
@@ -190,9 +187,8 @@ class Store extends Component {
               <img src={Arrow} />
             </Row>
 
-            <Row>
+            <Row to="/w/kickstarter-001">
               <Column flex="2">Using Firebase</Column>
-              <Column flex="2">React // Firebase // Redux</Column>
               <Column flex="1">02 Jan 2019</Column>
               <Column flex="1">6 hrs</Column>
 
@@ -200,11 +196,8 @@ class Store extends Component {
               <img src={Arrow} />
             </Row>
 
-            <Row>
-              <Column flex="2">
-                <b>Using Firebase</b>
-              </Column>
-              <Column flex="2">React // Firebase // Redux</Column>
+            <Row to="/w/kickstarter-001">
+              <Column flex="2">Using Firebase</Column>
               <Column flex="1">02 Jan 2019</Column>
               <Column flex="1">6 hrs</Column>
 
@@ -212,11 +205,10 @@ class Store extends Component {
               <img src={Arrow} />
             </Row>
 
-            <Row>
+            <Row to="/w/kickstarter-001">
               <Column flex="2">
-                <b>Build a custom audio player (Spotify clone?)</b>
+                Build a custom audio player (Spotify clone?)
               </Column>
-              <Column flex="2">React // Firebase // Redux</Column>
               <Column flex="1">02 Jan 2019</Column>
               <Column flex="1">6 hrs</Column>
 
@@ -224,11 +216,8 @@ class Store extends Component {
               <img src={Arrow} />
             </Row>
 
-            <Row>
-              <Column flex="2">
-                <b>How to GIT it done</b>
-              </Column>
-              <Column flex="2">React // Firebase // Redux</Column>
+            <Row to="/w/kickstarter-001">
+              <Column flex="2">How to GIT it done</Column>
               <Column flex="1">02 Jan 2019</Column>
               <Column flex="1">6 hrs</Column>
 
@@ -236,11 +225,8 @@ class Store extends Component {
               <img src={Arrow} />
             </Row>
 
-            <Row>
-              <Column flex="2">
-                <b>You can probably just use CSS</b>
-              </Column>
-              <Column flex="2">React // Firebase // Redux</Column>
+            <Row to="/w/kickstarter-001">
+              <Column flex="2">You can probably just use CSS</Column>
               <Column flex="1">02 Jan 2019</Column>
               <Column flex="1">6 hrs</Column>
 
@@ -248,11 +234,8 @@ class Store extends Component {
               <img src={Arrow} />
             </Row>
 
-            <Row>
-              <Column flex="2">
-                <b>How to ask for help</b>
-              </Column>
-              <Column flex="2">React // Firebase // Redux</Column>
+            <Row to="/w/kickstarter-001">
+              <Column flex="2">How to ask for help</Column>
               <Column flex="1">02 Jan 2019</Column>
               <Column flex="1">6 hrs</Column>
 
@@ -260,150 +243,54 @@ class Store extends Component {
               <img src={Arrow} />
             </Row>
 
-            <Row>
-              <Column flex="2">
-                <b>Airbnb Clone</b>
-              </Column>
-              <Column flex="2">React</Column>
+            <Row to="/w/kickstarter-001">
+              <Column flex="2">Airbnb Clone</Column>
               <Column flex="1">02 Jan 2019</Column>
               <Column flex="1">6 hrs</Column>
               <Column flex="1">24</Column>
               <img src={Arrow} />
             </Row>
 
-            <Row>
-              <Column flex="2">
-                <b>Breaking Down a Designer's Comp</b>
-              </Column>
-              <Column flex="2">React // Auth0</Column>
+            <Row to="/w/kickstarter-001">
+              <Column flex="2">Breaking Down a Designer's Comp</Column>
               <Column flex="1">02 Jan 2019</Column>
               <Column flex="1">2 hrs</Column>
               <Column flex="1">Free</Column>
               <img src={Arrow} />
             </Row>
 
-            <Row>
-              <Column flex="2">
-                <b>Estimating Times</b>
-              </Column>
-              <Column flex="2">React // Auth0</Column>
+            <Row to="/w/kickstarter-001">
+              <Column flex="2">Estimating Times</Column>
               <Column flex="1">02 Jan 2019</Column>
               <Column flex="1">2 hrs</Column>
               <Column flex="1">Free</Column>
               <img src={Arrow} />
             </Row>
 
-            <Row>
-              <Column flex="2">
-                {' '}
-                <b>Custom Auth0 Form</b>
-              </Column>
-              <Column flex="2">React // Auth0</Column>
+            <Row to="/w/kickstarter-001">
+              <Column flex="2"> Custom Auth0 Form</Column>
               <Column flex="1">02 Jan 2019</Column>
               <Column flex="1">2 hrs</Column>
               <Column flex="1">Free</Column>
               <img src={Arrow} />
             </Row>
 
-            <Row>
-              <Column flex="2">
-                {' '}
-                <b>Handling a Complex Design</b>
-              </Column>
-              <Column flex="2">React // Auth0</Column>
+            <Row to="/w/kickstarter-001">
+              <Column flex="2"> Handling a Complex Design</Column>
               <Column flex="1">02 Jan 2019</Column>
               <Column flex="1">2 hrs</Column>
               <Column flex="1">Free</Column>
               <img src={Arrow} />
             </Row>
 
-            <Row disabled>
-              <Column flex="2">
-                {' '}
-                <b>Instagram Clone</b>
-              </Column>
-              <Column flex="2">React // Firebase // Redux</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">6 hrs</Column>
-
-              <Column flex="1">24</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row disabled>
-              <Column flex="2">
-                {' '}
-                <b>Help! I'm in the weeds!</b>
-              </Column>
-              <Column flex="2">React // Express // Stripe </Column>
-              <Column flex="1">Jan 2019</Column>
-              <Column flex="1">2 hrs</Column>
-              <Column flex="1">Free</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row disabled>
-              <Column flex="2">
-                {' '}
-                <b>Stripe Checkout</b>
-              </Column>
-              <Column flex="2">React // Express // Stripe </Column>
-              <Column flex="1">Jan 2019</Column>
-              <Column flex="1">2 hrs</Column>
-              <Column flex="1">Free</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row disabled>
-              <Column flex="2">
-                {' '}
-                <b>Build a UI Kit</b>
-              </Column>
-              <Column flex="2">React</Column>
-              <Column flex="1">Feb 2019</Column>
-              <Column flex="1">1.5 hrs</Column>
-              <Column flex="1">Free</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row disabled>
-              <Column flex="2">
-                {' '}
-                <b>Publish to NPM</b>
-              </Column>
-              <Column flex="2">React</Column>
-              <Column flex="1">Feb 2019</Column>
-              <Column flex="1">15 min</Column>
-              <Column flex="1">Free</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row disabled>
-              <Column flex="2">
-                {' '}
-                <b>How To Use Imgix</b>
-              </Column>
-              <Column flex="2">React // Imgix</Column>
-              <Column flex="1">March 2019</Column>
-              <Column flex="1">24 min</Column>
-              <Column flex="1">Free</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row disabled>
-              <Column flex="2">
-                {' '}
-                <b>Deploy w/ Netlify</b>
-              </Column>
-              <Column flex="2">React // Netlify</Column>
+            <Row to="/w/kickstarter-001">
+              <Column flex="2"> Deploy w/ Netlify></Column>
               <Column flex="1">Feb 2019</Column>
               <Column flex="1">15 min</Column>
               <Column flex="1">Free</Column>
               <img src={Arrow} />
             </Row>
           </Rows>
-
-       
         </PageWrap>
       </div>
     );

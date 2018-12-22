@@ -30,10 +30,11 @@ const NavInfo = styled.div`
 
   a {
     padding-bottom: 2px;
-    margin-left: 16px;
+    margin-left: 30px;
     line-height: 1 !important;
     text-decoration: none;
     color: #111;
+    font-size: 14px;
   }
 `;
 
@@ -53,7 +54,7 @@ export default class Header extends Component {
           <Link to="/studio">Studio</Link>
           <Link to="/workshops">Workshops</Link>
           <Link to="/mentorship">1-1 Mentorship</Link>
-          <Link to="/editorial">Journal</Link>
+          <Link to="/editorial">Editorial</Link>
         </NavInfo>
       </StyledHeader>
     );

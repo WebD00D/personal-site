@@ -14,15 +14,32 @@ import Submitted from './views/submitted';
 import NoMatch from './views/404';
 
 // COMPONENTS
+import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
+// WORKSHOP ROUTES
+
+import { workshops } from './_workshops/data';
+
+const WorkshopRoutes = Object.keys(workshops).map(key => {
+  return (
+    <Route
+      key={key}
+      path={workshops[key].path}
+      component={workshops[key].component}
+      vimeo={workshops[key].vimeo}
+      exact
+    />
+  );
+});
 
 class App extends Component {
   render() {
     return (
       <div>
         <Router>
-          <div>
+          <ScrollToTop>
             <Header />
             <Switch>
               <Route exact path="/" component={Homepage} />
@@ -34,10 +51,13 @@ class App extends Component {
               <Route path="/editorial" component={Editorial} />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
+
+              {WorkshopRoutes}
+
               <Route component={NoMatch} />
             </Switch>
             <Footer />
-          </div>
+          </ScrollToTop>
         </Router>
       </div>
     );

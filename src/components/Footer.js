@@ -12,7 +12,6 @@ const StyledFooter = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  border-top: 1px solid #111;
 
   @media (max-width: 800px) {
     flex-direction: column-reverse;
