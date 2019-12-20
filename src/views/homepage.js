@@ -19,7 +19,7 @@ import Weedmaps from "../images/wm.png";
 
 
 const Section = styled("div")`
-  padding-top: 100px;
+  padding-top: 60px;
   padding-bottom: ${props => props.pb || "100px"};
 
   background-color: ${props => props.bg};
