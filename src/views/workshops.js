@@ -174,6 +174,14 @@ class Store extends Component {
               <Column flex="1">Length</Column>
               <Column flex="1">Price</Column>
             </Header>
+            
+            <Row to="/" onClick={(e) => e.preventDefault()}>
+              <Column flex="2">Flashcard Deck</Column>
+              <Column flex="1">Coming soon!</Column>
+              <Column flex="1">-</Column>
+              <Column flex="1">9</Column>
+              <img src={Arrow} />
+            </Row>
 
             <Row to="/" onClick={(e) => e.preventDefault()}>
               <Column flex="2">Craigslist Clone</Column>
@@ -217,7 +225,7 @@ class Store extends Component {
             </Row>
             
 
-            <Row to="/w/kickstarter-001">
+            <Row to="/" onClick={(e) => e.preventDefault()}>
               <Column flex="2">How to ask for help</Column>
               <Column flex="1">Coming soon!</Column>
               <Column flex="1">-</Column>
