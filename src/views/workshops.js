@@ -174,6 +174,14 @@ class Store extends Component {
               <Column flex="1">Length</Column>
               <Column flex="1">Price</Column>
             </Header>
+
+            <Row to="/" onClick={(e) => e.preventDefault()}>
+              <Column flex="2">Frontend Interview Prep</Column>
+              <Column flex="1">Coming soon!</Column>
+              <Column flex="1">-</Column>
+              <Column flex="1">4.99</Column>
+              <img src={Arrow} />
+            </Row>
             
             <Row to="/" onClick={(e) => e.preventDefault()}>
               <Column flex="2">Flashcard Deck</Column>
