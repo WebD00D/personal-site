@@ -184,9 +184,9 @@ class Mentorship extends Component {
               <a
                 style={{ color: '#111', fontWeight: '600' }}
                 target="_blank"
-                href="https://calendly.com/code-with-christian/frontend-help"
+                href="https://cozycal.com/code-with-christian"
               >
-                Book a 40 min session for $25.
+                Book a 30 min session for $25.
               </a>
             </div>
           </PageDescription>
@@ -269,8 +269,8 @@ class Mentorship extends Component {
             <Section>
               <h3>What to expect</h3>
               <p>
-                For 3 months, we'll work together meeting 5 times per week (2x
-                over video, 3x over Slack) covering the foundations of modern
+                For 3-6 months (varies with each student), we'll work together meeting 2 times per week over video
+                covering the foundations of modern
                 frontend web development.
               </p>
               <p>
@@ -287,13 +287,12 @@ class Mentorship extends Component {
 
               <h3>Price</h3>
               <p>
-                Total price is $900. First deposit ($450) due beginning of
-                class. Second deposit due after the 6th week. Within the first
-                week, if you decide this isn’t for you, no worries, full refund.
+                The curriculum and study guide is <b>Free</b>. You'll only pay for our 1 on 1
+                mentoring sessions which are pay-as-you-go: <b>$30 per 1 hour session</b>.
               </p>
 
-              <ScheduleButton target="_blank" href="https://www.typeform.com">
-                Apply for Mentorship
+              <ScheduleButton target="_blank" href="https://cozycal.com/code-with-christian">
+                Schedule Free Consultation
               </ScheduleButton>
             </Section>
           </PageSections>

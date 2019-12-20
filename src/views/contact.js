@@ -74,12 +74,12 @@ class Contact extends Component {
 
             <p>Recruiters, thank you but no thank you :)</p>
             <ul>
-              <li>studio@email.com</li>
-              <li>+1 213.349.1616 </li>
+              <li>christianlovescode@email.com</li>
+              <li>+1 804.801.6177</li>
             </ul>
             <ScheduleButton
               target="_blank"
-              href="https://calendly.com/code-with-christian/quick-chat"
+              href="https://cozycal.com/code-with-christian"
             >
               Schedule a call
             </ScheduleButton>

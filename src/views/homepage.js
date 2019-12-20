@@ -1,56 +1,103 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import styled from "styled-components";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import * as UI from '../components/UI';
+import * as UI from "../components/UI";
 
-import me from '../images/mesketch.png';
+import me from "../images/mesketch.png";
 
-import YoungFrankk from '../images/yf_logo.png';
-import RareArtLabs from '../images/logo_rare.png';
-import StabMag from '../images/logo_stab.png';
-import Mobelux from '../images/Mobelux.png';
-import Elephant from '../images/elephant.png';
-import KNOWN from '../images/known.png';
-import Maya from '../images/mayalogo@2x.png';
+import YoungFrankk from "../images/yf_logo.png";
+import RareArtLabs from "../images/logo_rare.png";
+import StabMag from "../images/logo_stab.png";
+import Mobelux from "../images/Mobelux.png";
+import Elephant from "../images/elephant.png";
+import KNOWN from "../images/known.png";
+import Maya from "../images/mayalogo@2x.png";
+import Weedmaps from "../images/wm.png";
 
-const Section = styled('div')`
+
+
+const Section = styled("div")`
   padding-top: 100px;
-  padding-bottom: ${props => props.pb || '100px'};
+  padding-bottom: ${props => props.pb || "100px"};
 
   background-color: ${props => props.bg};
+
+  @media (max-width: 1100px) {
+    padding-top: 32px;
+  }
 `;
 
-const Brands = styled('div')`
+const Hero = styled(UI.Flex)`
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+
+    h1 {
+      font-size: 30px;
+    }
+
+  }
+
+`
+
+const HelpSection = styled(UI.Flex)`
+  @media (max-width: 1100px) {
+    flex-direction: column;
+
+    .services {
+      display: none;
+    }
+  }
+`
+
+const Brands = styled("div")`
   margin-bottom: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
 
-const Brand = styled('a')`
-  img {
-    height: ${props => props.height || '50px'};
+  @media (max-width: 1100px) {
+    overflow-x: scroll;
   }
 `;
 
-const MyFace = styled('img')`
+const Brand = styled("a")`
+  img {
+    height: ${props => props.height || "50px"};
+  }
+
+  @media (max-width: 1100px) {
+    img {
+      margin-right: 22px;
+      margin-left: 22px;
+    }
+  }
+`;
+
+const MyFace = styled("img")`
   position: relative;
   top: -40px;
   max-height: 440px;
   width: auto;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
 `;
 
-const ServiceImage = styled('img')`
-  height: 170px;
+const ServiceImage = styled("div")`
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 90px;
 `;
 
-const JournalImage = styled('img')`
+const JournalImage = styled("img")`
   height: 300px;
 `;
-
-
 
 class HomepageView extends Component {
   render() {
@@ -58,38 +105,40 @@ class HomepageView extends Component {
       <div>
         <Section pb="50px">
           <div className="content-wrap">
-            <UI.Flex>
+            <Hero>
               <UI.Box flex="2">
                 <UI.H1>
-                  Hello, välkommen,{' '}
-                  <span style={{ whiteSpace: 'nowrap' }}>안녕,</span> aloha.
+                  👋 Hi there! I'm Christian – Software engineer and mentor in sunny Los Angeles.
                 </UI.H1>
                 <UI.H2 mb="50px">
-                  My name is Christian – welcome to my corner of the world wide
-                  web. I can build you a website, teach you how to code, or
-                  consult and knock around some ideas for your next digital
-                  project. This past year I've mostly been slinging code for{' '}
-                  <UI.ExternalLink href="https://www.rareart.io">
-                    Rare Art Labs
+                  Welcome to my corner of the internet. I can build you a
+                  web(site/app), teach you how to code, or consult and knock
+                  around some ideas for your next project. This past year I've
+                  been slinging code for{" "}
+                  <UI.ExternalLink href="https://www.weedmaps.com">
+                    Weedmaps
                   </UI.ExternalLink>
-                  , and{' '}
+                  , and a really cool project called{" "}
                   <UI.ExternalLink href="https://www.stabmag.com">
-                    Stab Magazine.
-                  </UI.ExternalLink>{' '}
-                  When I'm not behind the screen, I like to surf, travel, and
-                  cook delicious food for my beautiful wife.
+                    Maya Care.
+                  </UI.ExternalLink>{" "}
+                  When I'm not behind the screen, I like to fly airplanes,
+                  travel, surf and play tennis with my wife.
                 </UI.H2>
-                <UI.ButtonLink href="">Connect with me</UI.ButtonLink>
+                <UI.ButtonLink href="#help">Learn More</UI.ButtonLink>
               </UI.Box>
               <UI.Box flexCenter>
                 <MyFace src={me} />
               </UI.Box>
-            </UI.Flex>
+            </Hero>
           </div>
         </Section>
 
         <div className="content-wrap">
           <Brands>
+            <Brand height="60px" href="https://www.weedmaps.com">
+              <img src={Weedmaps} />
+            </Brand>
             <Brand height="60px" href="https://www.rareart.io">
               <img src={RareArtLabs} />
             </Brand>
@@ -114,89 +163,59 @@ class HomepageView extends Component {
           </Brands>
         </div>
 
-        <Section bg="#0f0f10">
+        <Section bg={"#0f0f10"} id="help">
           <div className="content-wrap">
-            <UI.H3 theme="light">A brief introduction</UI.H3>
-            <UI.P color="#d6d6d6">
-              Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum Bäcker,
-              später dann zum Einkaufen, ich sauge die Wohnung, ich arbeite
-              zusammen mit meiner Tochter eine Zeitlang im Garten und am
-              Nachmittag sind. Ein gewöhnlicher Samstag, ich gehe nach dem
-              Aufstehen zum Bäcker, später dann zum Einkaufen, ich sauge die
-              Wohnung, ich arbeite zusammen mit meiner Tochter eine Zeitlang im
-              Garten und am Nachmittag sind.
-            </UI.P>
-          </div>
-        </Section>
-        <Section>
-          <div className="content-wrap">
-            <UI.H3 theme="dark">How I can help you</UI.H3>
-            <UI.Flex alignCenter>
+            <UI.H3 theme="white">How I can help you</UI.H3>
+            <HelpSection alignCenter>
               <UI.Box>
-                <UI.P mb="30px" color="#0f0f10">
-                  Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum
-                  Bäcker, später dann zum Einkaufen, ich sauge die Wohnung, ich
-                  arbeite zusammen mit meiner Tochter eine Zeitlang im Garten
-                  und am Nachmittag sind.
+                <UI.P mb="30px" color="#d6d6d6">
+                  Over the last 7 years I've worked with brands of all sizes,
+                  from local mom and pop shops, to government agencies and multi-million
+                  dollar corperations. I can design, build, and manage a software project from the ground up, or 
+                  jump into an existing codebase to refactor and get your project ready for launch day. Not ready
+                  for development yet? No problem. Entrepreneurship is a passion of mine, and I can help you think through ideas 
+                  and turn them into a reality.
                 </UI.P>
-                <UI.P mb="80px" color="#0f0f10">
-                  Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum
-                  Bäcker, später dann zum Einkaufen, ich sauge die Wohnung, ich
-                  arbeite zusammen mit meiner Tochter eine Zeitlang im Garten
-                  und am Nachmittag sind.
+                <UI.P mb="40px" color="#d6d6d6">
+                  As much as I love coding, I also love teaching it. 
+                  I've mentored folks from different walks of life, helping them learn to code and launch 
+                  their projects. I offer weekly, bi-weekly, or as-you-need it tutoring services to help you build your dreams.
                 </UI.P>
-                <UI.Button to="/studio">Learn more</UI.Button>
+                <UI.Button theme="white" to="/studio">Connect with Me</UI.Button>
               </UI.Box>
-              <UI.Box mt="-60px">
+              <UI.Box mt="-60px" className="services">
                 <UI.Flex column>
                   <UI.Flex>
                     <UI.Box mb="20px" flexCenter column>
-                      <ServiceImage src={me} />
-                      <UI.H4>Design + Development</UI.H4>
+                      <ServiceImage>
+                        <span>👨🏻‍💻</span>
+                      </ServiceImage>
+                      <UI.H4 mt={0}>Design + Development</UI.H4>
                     </UI.Box>
                     <UI.Box mb="20px" flexCenter column>
-                      <ServiceImage src={me} />
-                      <UI.H4>Coaching + Mentorship</UI.H4>
+                      <ServiceImage>
+                        <span>💡</span>
+                      </ServiceImage>
+                      <UI.H4 mt={0}>Coaching + Mentorship</UI.H4>
                     </UI.Box>
                   </UI.Flex>
                   <UI.Flex>
                     <UI.Box mb="20px" flexCenter column>
-                      <ServiceImage src={me} />
-                      <UI.H4>Strategy + Consulting</UI.H4>
+                      <ServiceImage>
+                        <span>🧭</span>
+                      </ServiceImage>
+                      <UI.H4 mt={0}>Strategy + Consulting</UI.H4>
                     </UI.Box>
                     <UI.Box mb="20px" flexCenter column>
-                      <ServiceImage src={me} />
-                      <UI.H4>Workshops + Training</UI.H4>
+                      <ServiceImage>
+                        <span>📚</span>
+                      </ServiceImage>
+                      <UI.H4 mt={0}>Workshops + Training</UI.H4>
                     </UI.Box>
                   </UI.Flex>
                 </UI.Flex>
               </UI.Box>
-            </UI.Flex>
-          </div>
-        </Section>
-        <Section bg="#f9f9f9">
-          <div className="content-wrap">
-            <UI.H3 theme="dark">Editorial – Latest</UI.H3>
-            <UI.Flex alignCenter>
-              <UI.Box flex="2">
-                <UI.H4 title mb="12px">
-                  Lorem ipsum dolar set
-                </UI.H4>
-                <UI.P mb="30px">
-                  Ein gewöhnlicher Samstag, ich gehe nach dem Aufstehen zum
-                  Bäcker, später dann zum Einkaufen, ich sauge die Wohnung, ich
-                  arbeite zusammen mit meiner Tochter eine Zeitlang im Garten
-                  und am Nachmittag sind wir zu einem Kindergeburtstag bei
-                  Freunden eingeladen; das Wetter an diesem 1. September ist
-                  milde, die Sonne scheint, nur im Schatten kann man den
-                  aufziehenden Herbst bereits erahnen...
-                </UI.P>
-                <UI.ButtonLink href="#">View all</UI.ButtonLink>
-              </UI.Box>
-              <UI.Box flexCenter flex="1">
-                <JournalImage src={me} />
-              </UI.Box>
-            </UI.Flex>
+            </HelpSection>
           </div>
         </Section>
 

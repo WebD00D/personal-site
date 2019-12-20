@@ -36,25 +36,55 @@ const NavInfo = styled.div`
     color: #111;
     font-size: 14px;
   }
+
+  @media (max-width: 1100px) {
+
+    flex-direction: column;
+    background-color: #fff;
+
+   
+
+    a {
+      line-height: 2 !important;
+      text-align: right;
+    }
+  }
 `;
+
+const MobileMenu = styled.div`
+    padding-bottom: 2px;
+    margin-left: 30px;
+    line-height: 1 !important;
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+
+    
+`
 
 const MyLogo = styled('img')`
   height: 50px;
 `;
 
 export default class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    }
+  }
   render() {
     return (
       <StyledHeader>
         <UI.Wordmark to="/">
           <MyLogo src={Logo} />
         </UI.Wordmark>
-        <NavInfo>
+     
+        <NavInfo open={this.state.open}>
           <Link to="/about">About</Link>
           <Link to="/studio">Studio</Link>
           <Link to="/workshops">Workshops</Link>
           <Link to="/mentorship">1-1 Mentorship</Link>
-          <Link to="/editorial">Editorial</Link>
         </NavInfo>
       </StyledHeader>
     );

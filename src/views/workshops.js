@@ -163,11 +163,8 @@ class Store extends Component {
             Workshops
           </PageHeader>
           <PageDescription>
-            Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+            Hey everyone! Level up your skills with a workshop. I offer tutorials, tips, and tricks for beginner and intermediate 
+            developers, as well as portfolio projects you can use to interview with!
           </PageDescription>
 
           <Rows>
@@ -178,115 +175,77 @@ class Store extends Component {
               <Column flex="1">Price</Column>
             </Header>
 
-            <Row to="/w/kickstarter-001">
+            <Row to="/" onClick={(e) => e.preventDefault()}>
               <Column flex="2">Craigslist Clone</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">6 hrs</Column>
-
-              <Column flex="1">24</Column>
+              <Column flex="1">Coming soon!</Column>
+              <Column flex="1">-</Column>
+              <Column flex="1">9</Column>
               <img src={Arrow} />
             </Row>
 
-            <Row to="/w/kickstarter-001">
+            <Row to="/" onClick={(e) => e.preventDefault()}>
               <Column flex="2">Using Firebase</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">6 hrs</Column>
-
-              <Column flex="1">24</Column>
+              <Column flex="1">Coming soon!</Column>
+              <Column flex="1">-</Column>
+              <Column flex="1">9</Column>
               <img src={Arrow} />
             </Row>
 
-            <Row to="/w/kickstarter-001">
-              <Column flex="2">Using Firebase</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">6 hrs</Column>
-
-              <Column flex="1">24</Column>
+            <Row to="/" onClick={(e) => e.preventDefault()}>
+              <Column flex="2">Airbnb Clone</Column>
+              <Column flex="1">Coming soon!</Column>
+              <Column flex="1">-</Column>
+              <Column flex="1">9</Column>
               <img src={Arrow} />
             </Row>
 
-            <Row to="/w/kickstarter-001">
-              <Column flex="2">
-                Build a custom audio player (Spotify clone?)
-              </Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">6 hrs</Column>
 
-              <Column flex="1">24</Column>
+            <Row to="/" onClick={(e) => e.preventDefault()}>
+              <Column flex="2">Setting up a project on Github</Column>
+              <Column flex="1">Coming soon!</Column>
+              <Column flex="1">-</Column>
+              <Column flex="1">Free</Column>
               <img src={Arrow} />
             </Row>
 
-            <Row to="/w/kickstarter-001">
-              <Column flex="2">How to GIT it done</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">6 hrs</Column>
-
-              <Column flex="1">24</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row to="/w/kickstarter-001">
+            <Row to="/" onClick={(e) => e.preventDefault()}>
               <Column flex="2">You can probably just use CSS</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">6 hrs</Column>
-
-              <Column flex="1">24</Column>
+              <Column flex="1">Coming soon!</Column>
+              <Column flex="1">-</Column>
+              <Column flex="1">Free</Column>
               <img src={Arrow} />
             </Row>
+            
 
             <Row to="/w/kickstarter-001">
               <Column flex="2">How to ask for help</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">6 hrs</Column>
-
-              <Column flex="1">24</Column>
+              <Column flex="1">Coming soon!</Column>
+              <Column flex="1">-</Column>
+              <Column flex="1">Free</Column>
               <img src={Arrow} />
             </Row>
 
-            <Row to="/w/kickstarter-001">
-              <Column flex="2">Airbnb Clone</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">6 hrs</Column>
-              <Column flex="1">24</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row to="/w/kickstarter-001">
+            <Row to="/" onClick={(e) => e.preventDefault()}>
               <Column flex="2">Breaking Down a Designer's Comp</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">2 hrs</Column>
+              <Column flex="1">Coming Soon!</Column>
+              <Column flex="1">-</Column>
               <Column flex="1">Free</Column>
               <img src={Arrow} />
             </Row>
 
-            <Row to="/w/kickstarter-001">
-              <Column flex="2">Estimating Times</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">2 hrs</Column>
-              <Column flex="1">Free</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row to="/w/kickstarter-001">
-              <Column flex="2"> Custom Auth0 Form</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">2 hrs</Column>
-              <Column flex="1">Free</Column>
-              <img src={Arrow} />
-            </Row>
-
-            <Row to="/w/kickstarter-001">
+    
+            <Row to="/" onClick={(e) => e.preventDefault()}>
               <Column flex="2"> Handling a Complex Design</Column>
-              <Column flex="1">02 Jan 2019</Column>
-              <Column flex="1">2 hrs</Column>
+              <Column flex="1">Coming Soon!</Column>
+              <Column flex="1">-</Column>
               <Column flex="1">Free</Column>
               <img src={Arrow} />
             </Row>
 
-            <Row to="/w/kickstarter-001">
-              <Column flex="2"> Deploy w/ Netlify></Column>
-              <Column flex="1">Feb 2019</Column>
-              <Column flex="1">15 min</Column>
+            <Row to="/" onClick={(e) => e.preventDefault()}>
+              <Column flex="2"> Deploy w/ Netlify</Column>
+              <Column flex="1">Coming soon!</Column>
+              <Column flex="1">-</Column>
               <Column flex="1">Free</Column>
               <img src={Arrow} />
             </Row>

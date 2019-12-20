@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import * as UI from './UI';
 import Newsletter from './Newsletter';
+import Logo from '../images/mylogo.png';
+
 
 const StyledFooter = styled.div`
   height: 80px;
@@ -54,6 +56,10 @@ const FooterSection = styled.div`
   }
 `;
 
+const MyLogo = styled('img')`
+  height: 50px;
+`;
+
 class Footer extends Component {
   render() {
     return (
@@ -64,7 +70,7 @@ class Footer extends Component {
               Contact
             </Link>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/my.friend.christian/"
               className="page-link"
               target="_blank"
             >
@@ -80,7 +86,7 @@ class Footer extends Component {
             </a>
           </FooterSection>
           <FooterSection>
-            <Newsletter />
+          <MyLogo src={Logo} />
           </FooterSection>
         </StyledFooter>
       </div>

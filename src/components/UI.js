@@ -1,53 +1,53 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const Flex = styled('div')`
+export const Flex = styled("div")`
   display: flex;
-  ${props => (props.column ? 'flex-direction: column' : '')}
+  ${props => (props.column ? "flex-direction: column" : "")}
 
-  ${props => (props.alignCenter ? 'align-items: center' : '')}
+  ${props => (props.alignCenter ? "align-items: center" : "")}
 `;
 
-export const Box = styled('div')`
+export const Box = styled("div")`
   flex: ${props => props.flex || 1};
-  ${props => (props.column ? 'flex-direction: column' : '')}
+  ${props => (props.column ? "flex-direction: column" : "")}
   margin-bottom: ${props => props.mb};
   margin-top: ${props => props.mt};
 
   ${props =>
     props.flexCenter
-      ? 'display: flex; justify-content: center; align-items:center'
-      : ''};
+      ? "display: flex; justify-content: center; align-items:center"
+      : ""};
 
  
 `;
 
-export const H1 = styled('h1')`
+export const H1 = styled("h1")`
   margin-top: 0px;
   margin-bottom: 20px;
-  font-size: 70px;
-  font-family: 'Work Sans', sans-serif;
+  font-size: 48px;
+  font-family: "Work Sans", sans-serif;
   font-weight: 600;
 `;
 
-export const H2 = styled('h2')`
+export const H2 = styled("h2")`
   margin-bottom: ${props => props.mb};
   font-size: 16px;
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 1.75;
 `;
 
-export const H3 = styled('div')`
+export const H3 = styled("div")`
   margin-bottom: 40px;
   position: relative;
   width: fit-content;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 
   font-size: 24px;
 
-  ${props => (props.theme === 'dark' ? 'color: #0f0f10' : 'color: #fff')}
+  ${props => (props.theme === "dark" ? "color: #0f0f10" : "color: #fff")}
 
   &:after {
     position: absolute;
@@ -56,29 +56,32 @@ export const H3 = styled('div')`
     left: 0px;
 
     ${props =>
-      props.theme === 'dark'
-        ? 'background-color: #0f0f10'
-        : 'background-color: #ccc'}
+      props.theme === "dark"
+        ? "background-color: #0f0f10"
+        : "background-color: #ccc"}
 
     opacity: 0.2;
-    content: '';
+    content: "";
     bottom: -5px;
   }
 `;
 
-export const H4 = styled('h4')`
+export const H4 = styled("h4")`
   margin-bottom: ${props => props.mb};
-  font-size: ${props => (props.title ? '18px' : '14px')};
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  margin-top: ${props => props.mt};
+  font-size: ${props => (props.title ? "18px" : "14px")};
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 500;
   letter-spacing: 0.5px;
   line-height: 1.75;
+
+  ${props => (props.theme === "dark" ? "color: #0f0f10" : "color: #fff")}
 `;
 
-export const P = styled('p')`
+export const P = styled("p")`
   margin: 0px;
   font-size: 16px;
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 1.75;
@@ -133,13 +136,39 @@ const ButtonBase = `
 
 export const Button = styled(Link)`
   ${ButtonBase}
+
+  ${props =>
+    props.theme === "dark"
+      ? "background-color: #0f0f10"
+      : "background-color: #fff"}
+
+  ${props => (props.theme === "dark" ? "color: #0f0f10" : "color: #000")}
+
+  ${props => props.theme === "white" && "border: 2px solid #fff;"}
+
+
+  &:before {
+
+    ${props => props.theme === "white" && "border: 2px solid #fff;"}
+
+  }
+
+  &:active {
+
+    ${props => props.theme === "white" && "background-color: #ccc; color: #000;"}
+
+
+    &:before {
+      ${props => props.theme === "white" && "border: 2px solid #ccc;"}
+    }
+  }
 `;
 
-export const ButtonLink = styled('a')`
+export const ButtonLink = styled("a")`
   ${ButtonBase}
 `;
 
-export const ExternalLink = styled('a')`
+export const ExternalLink = styled("a")`
   color: #0f0f10;
   font-weight: 500;
 `;
@@ -154,7 +183,7 @@ export const Wordmark = styled(Link)`
   color: #111;
 `;
 
-export const Video = styled('iframe')`
+export const Video = styled("iframe")`
   position: absolute;
   top: 0;
   left: 0;
@@ -163,7 +192,7 @@ export const Video = styled('iframe')`
   border: none;
 `;
 
-export const VideoContainer = styled('div')`
+export const VideoContainer = styled("div")`
   padding: 56.25% 0 0 0;
   position: relative;
 `;

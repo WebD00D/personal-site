@@ -152,7 +152,7 @@ class About extends Component {
               <Link style={{color: "#111"}} to="/studio">
                 (you can check that out or hire me by the day here)
               </Link>
-              , however, in 2019 I’ll be allocating a majority of my time
+              , however, in 2020 I’ll be allocating a majority of my time
               crafting workshops and mentoring folks who want to become web
               developers. Being able to teach others how to code has been my
               guiding light goal for the last several years, and I feel I’m at a

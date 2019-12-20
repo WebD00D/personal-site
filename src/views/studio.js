@@ -188,7 +188,7 @@ class Studio extends Component {
               <SubSection mb="60px">
                 <h3>Technologies & Tools</h3>
                 <p>
-                  HTML5, CSS, SASS, JavaScript, React, React Native, Redux,
+                  HTML5, CSS, SASS, JavaScript, React, React Native, Redux, Mobx, TypeScript,
                   GraphQL, Firebase, Netlify, Github, Figma, Illustrator,
                   Photoshop, Slack, & Milanote.
                 </p>
@@ -198,8 +198,13 @@ class Studio extends Component {
               <h3>Select Projects & Work Experience</h3>
               <Projects>
                 <ul>
+                <li>
+                    <a target="_blank" href="https://www.weedmaps.com/">
+                      Weedmaps
+                    </a>
+                  </li>
                   <li>
-                    <a target="_blank" href="https://dapp.rareart.io/">
+                    <a target="_blank" href="https://rareart.io/">
                       R.A.R.E
                     </a>
                   </li>
@@ -267,17 +272,15 @@ class Studio extends Component {
                 </Quote>
                 <Quote>
                   <div>
-                    “Christian was so great to work with, pays attention to
-                    detail like a laser.”
+                    “He understands that people can learn from different perspectives and is patient and thorough with his explainations.”
                   </div>
-                  <span>Sam McIntosh, Stab Magazine - CEO</span>
+                  <span>Van Young, student</span>
                 </Quote>
                 <Quote>
                   <div>
-                    “Christian was so great to work with, pays attention to
-                    detail like a laser.”
+                    “Christian has excellent communication skills and does awesome work! Definitely recommend.”
                   </div>
-                  <span>Sam McIntosh, Stab Magazine - CEO</span>
+                  <span>Christine Young, Young Frankk - Founder</span>
                 </Quote>
               </SubSection>
             </Section>
