@@ -123,7 +123,7 @@ class HomepageView extends Component {
                     Maya Care.
                   </UI.ExternalLink>{" "}
                   When I'm not behind the screen, I like to fly airplanes,
-                  travel, surf and play tennis with my wife.
+                  travel, surf and play tennis with my beautiful wife.
                 </UI.H2>
                 <UI.ButtonLink href="#help">Learn More</UI.ButtonLink>
               </UI.Box>
