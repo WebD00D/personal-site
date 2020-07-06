@@ -152,12 +152,12 @@ class HomepageView extends Component {
           </p>
         </Content>
         <Footer>
-          <NewsletterForm
-            name="newsletter-subscription"
-            method="post"
-            action="/?submitted=true"
-          >
-            <input type="hidden" name="form-name" value="newsletter" />
+          <NewsletterForm name="newsletter-subscription" method="post">
+            <input
+              type="hidden"
+              name="form-name"
+              value="newsletter-subscription"
+            />
 
             <h2>Subscribe to my newsletter</h2>
             <label>
@@ -170,7 +170,8 @@ class HomepageView extends Component {
                 type="email"
                 placeholder="Your email address, please."
               />
-              <button>Submit</button>
+
+              <button type="submit">Submit</button>
             </InputRow>
           </NewsletterForm>
           <Portrait src={MyFace} />
