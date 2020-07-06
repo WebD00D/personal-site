@@ -1,225 +1,181 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import { Link } from "react-router-dom";
+import MyFace from "../images/mesketch.png";
 
-import * as UI from "../components/UI";
+const PageWrap = styled("div")`
+  padding: 16px;
+  padding-top: 48px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 
-import me from "../images/mesketch.png";
+  a {
+    color: #464646;
+    font-size: 18px;
+  }
 
-import YoungFrankk from "../images/yf_logo.png";
-import RareArtLabs from "../images/logo_rare.png";
-import StabMag from "../images/logo_stab.png";
-import Mobelux from "../images/Mobelux.png";
-import Elephant from "../images/elephant.png";
-import KNOWN from "../images/known.png";
-import Maya from "../images/mayalogo@2x.png";
-import Weedmaps from "../images/wm.png";
+  h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 12px;
+  }
 
+  label {
+    color: #626262;
+    font-size: 16px;
+  }
 
-const Section = styled("div")`
-  padding-top: 60px;
-  padding-bottom: ${props => props.pb || "100px"};
-
-  background-color: ${props => props.bg};
-
-  @media (max-width: 1100px) {
-    padding-top: 32px;
+  p {
+    font-size: 20px;
+    line-height: 150%;
   }
 `;
 
-const Hero = styled(UI.Flex)`
-
-  @media (max-width: 1100px) {
-    flex-direction: column;
-
-    h1 {
-      font-size: 30px;
-    }
-
-  }
-
-`
-
-const HelpSection = styled(UI.Flex)`
-  @media (max-width: 1100px) {
-    flex-direction: column;
-
-    .services {
-      display: none;
-    }
-  }
-`
-
-const Brands = styled("div")`
-  margin-bottom: 60px;
+const Nav = styled("div")`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+`;
 
-  @media (max-width: 1100px) {
-    overflow-x: scroll;
+const Content = styled("div")``;
+
+const Footer = styled("div")`
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr 150px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
   }
 `;
 
-const Brand = styled("a")`
-  img {
-    height: ${props => props.height || "50px"};
-  }
+const NewsletterForm = styled("form")`
+  max-width: 420px;
 
-  @media (max-width: 1100px) {
-    img {
-      margin-right: 22px;
-      margin-left: 22px;
-    }
+  @media (max-width: 600px) {
+    max-width: 600px;
   }
 `;
 
-const MyFace = styled("img")`
-  position: relative;
-  top: -40px;
-  max-height: 440px;
-  width: auto;
+const InputRow = styled("div")`
+  margin-top: 52px;
+  display: flex;
 
-  @media (max-width: 1100px) {
+  input {
+    background-color: #f6f6f6;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    flex: 1;
+    margin-right: 16px;
+    font-family: "Crimson Text", serif;
+    outline: none;
+    font-size: 16px;
+  }
+
+  button {
+    border: 1px solid #7b7a7a;
+    font-family: "Crimson Text", serif;
+
+    height: 32px;
+    border-radius: 50px;
+    width: 140px;
+    font-weight: 700;
+    color: #464646;
+    outline: none;
+    font-size: 16px;
+  }
+`;
+
+const Portrait = styled("img")`
+  height: 200px;
+
+  @media (max-width: 600px) {
     display: none;
   }
-`;
-
-const ServiceImage = styled("div")`
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 90px;
-`;
-
-const JournalImage = styled("img")`
-  height: 300px;
 `;
 
 class HomepageView extends Component {
   render() {
     return (
-      <div>
-        <Section pb="50px">
-          <div className="content-wrap">
-            <Hero>
-              <UI.Box flex="2">
-                <UI.H1>
-                  👋 Hi there! I'm Christian – Software engineer and mentor in sunny Los Angeles.
-                </UI.H1>
-                <UI.H2 mb="50px">
-                  Welcome to my corner of the internet. I can build you a
-                  web(site/app), teach you how to code, or consult and knock
-                  around some ideas for your next project. This past year I've
-                  been slinging code for{" "}
-                  <UI.ExternalLink href="https://www.weedmaps.com">
-                    Weedmaps
-                  </UI.ExternalLink>
-                  , and a really cool project called{" "}
-                  <UI.ExternalLink href="https://www.stabmag.com">
-                    Maya Care.
-                  </UI.ExternalLink>{" "}
-                  When I'm not behind the screen, I like to fly airplanes,
-                  travel, surf and play tennis with my beautiful wife.
-                </UI.H2>
-                <UI.ButtonLink href="#help">Learn More</UI.ButtonLink>
-              </UI.Box>
-              <UI.Box flexCenter>
-                <MyFace src={me} />
-              </UI.Box>
-            </Hero>
-          </div>
-        </Section>
+      <PageWrap>
+        <Nav>
+          <h1>Christian Bryant</h1>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/christian-bryant-222723136/"
+          >
+            Say hello
+          </a>
+        </Nav>
+        <Content>
+          <p>
+            I believe nothing is too tall to climb or too far to reach. I
+            believe everything you dream can be made into reality. This mindset
+            helps guide every project I work on and how I choose to spend my
+            time – software development just happens to be the medium I choose
+            most.
+          </p>
+          <p>
+            Currently writing code at{" "}
+            <a
+              href="https://hopin.to"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hopin
+            </a>
+            , and when I’m not, I’m writing and recording for newsletter &
+            podcast,{" "}
+            <a
+              href="https://stackyack.substack.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Stack Yack
+            </a>
+            . In my non-work hours, I spend my time flying airplanes, surfing,
+            and traveling with my{" "}
+            <a
+              href="https://www.youngfrankk.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              amazingly talented wife.
+            </a>
+          </p>
+        </Content>
+        <Footer>
+          <NewsletterForm
+            name="contact"
+            method="post"
+            action="/?submitted=true"
+          >
+            <input type="hidden" name="form-name" value="newsletter" />
 
-        <div className="content-wrap">
-          <Brands>
-            <Brand height="60px" href="https://www.weedmaps.com">
-              <img src={Weedmaps} />
-            </Brand>
-            <Brand height="60px" href="https://www.rareart.io">
-              <img src={RareArtLabs} />
-            </Brand>
-            <Brand height="40px" href="https://www.youngfrankk.com">
-              <img src={YoungFrankk} />
-            </Brand>
-            <Brand height="30px" href="https://www.stabmag.com">
-              <img src={StabMag} />
-            </Brand>
-            <Brand height="60px" href="https://www.mobelux.com">
-              <img src={Mobelux} />
-            </Brand>
-            <Brand height="40px" href="https://www.elephant.com">
-              <img src={Elephant} />
-            </Brand>
-            <Brand height="30px" href="https://www.knownagency.com">
-              <img src={KNOWN} />
-            </Brand>
-            <Brand height="40px" href="">
-              <img src={Maya} />
-            </Brand>
-          </Brands>
-        </div>
-
-        <Section bg={"#0f0f10"} id="help">
-          <div className="content-wrap">
-            <UI.H3 theme="white">How I can help you</UI.H3>
-            <HelpSection alignCenter>
-              <UI.Box>
-                <UI.P mb="30px" color="#d6d6d6">
-                  Over the last 7 years I've worked with brands of all sizes,
-                  from local mom and pop shops, to government agencies and multi-million
-                  dollar corperations. I can design, build, and manage a software project from the ground up, or 
-                  jump into an existing codebase to refactor and get your project ready for launch day. Not ready
-                  for development yet? No problem. Entrepreneurship is a passion of mine, and I can help you think through ideas 
-                  and turn them into a reality.
-                </UI.P>
-                <UI.P mb="40px" color="#d6d6d6">
-                  As much as I love coding, I also love teaching it. 
-                  I've mentored folks from different walks of life, helping them learn to code and launch 
-                  their projects. I offer weekly, bi-weekly, or as-you-need it tutoring services to help you build your dreams.
-                </UI.P>
-                <UI.Button theme="white" to="/studio">Connect with Me</UI.Button>
-              </UI.Box>
-              <UI.Box mt="-60px" className="services">
-                <UI.Flex column>
-                  <UI.Flex>
-                    <UI.Box mb="20px" flexCenter column>
-                      <ServiceImage>
-                        <span>👨🏻‍💻</span>
-                      </ServiceImage>
-                      <UI.H4 mt={0}>Design + Development</UI.H4>
-                    </UI.Box>
-                    <UI.Box mb="20px" flexCenter column>
-                      <ServiceImage>
-                        <span>💡</span>
-                      </ServiceImage>
-                      <UI.H4 mt={0}>Coaching + Mentorship</UI.H4>
-                    </UI.Box>
-                  </UI.Flex>
-                  <UI.Flex>
-                    <UI.Box mb="20px" flexCenter column>
-                      <ServiceImage>
-                        <span>🧭</span>
-                      </ServiceImage>
-                      <UI.H4 mt={0}>Strategy + Consulting</UI.H4>
-                    </UI.Box>
-                    <UI.Box mb="20px" flexCenter column>
-                      <ServiceImage>
-                        <span>📚</span>
-                      </ServiceImage>
-                      <UI.H4 mt={0}>Workshops + Training</UI.H4>
-                    </UI.Box>
-                  </UI.Flex>
-                </UI.Flex>
-              </UI.Box>
-            </HelpSection>
-          </div>
-        </Section>
-
-      </div>
+            <h2>Subscribe to my newsletter</h2>
+            <label>
+              Thoughts on software development, startups, tech, and an
+              occasional rambling about whatever else is on my mind.
+            </label>
+            <InputRow>
+              <input
+                name="email"
+                type="email"
+                placeholder="Your email address, please."
+              />
+              <button>Submit</button>
+            </InputRow>
+          </NewsletterForm>
+          <Portrait src={MyFace} />
+        </Footer>
+      </PageWrap>
     );
   }
 }

@@ -1,13 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Crimson Text", serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 500;
-  
-
+  font-weight: 400;
+  background-color: #F6F6F6;
+  color: #464646;
 }
 
 html {
@@ -15,10 +15,9 @@ html {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 
 .container {
   max-width: 1200px;
@@ -42,5 +41,3 @@ code {
     padding-right: 16px;
   }
 }
-
-
