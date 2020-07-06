@@ -111,7 +111,7 @@ class HomepageView extends Component {
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/christian-bryant-222723136/"
           >
-            Say hello
+            LinkedIn
           </a>
         </Nav>
         <Content>
