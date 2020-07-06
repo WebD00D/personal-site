@@ -153,7 +153,7 @@ class HomepageView extends Component {
         </Content>
         <Footer>
           <NewsletterForm
-            name="contact"
+            name="newsletter-subscription"
             method="post"
             action="/?submitted=true"
           >
