@@ -131,7 +131,7 @@ class HomepageView extends Component {
             >
               Hopin
             </a>
-            , and when I’m not, I’m writing and recording for newsletter &
+            , and when I’m not, I’m writing and recording for my newsletter &
             podcast,{" "}
             <a
               href="https://stackyack.substack.com"
