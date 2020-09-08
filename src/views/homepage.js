@@ -134,7 +134,7 @@ class HomepageView extends Component {
             , and when I’m not, I’m writing and recording for my newsletter &
             podcast,{" "}
             <a
-              href="https://stackyack.substack.com"
+              href="https://stackyack.tv/"
               target="_blank"
               rel="noopener noreferrer"
             >
